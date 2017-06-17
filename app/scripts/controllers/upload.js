@@ -3,18 +3,18 @@
 
 /**
  * @ngdoc function
- * @name losungenApp.controller:AboutCtrl
+ * @name losungenApp.controller:UploadCtrl
  * @description
- * # AboutCtrl
+ * # UploadCtrl
  * Controller of the losungenApp
  */
 angular.module('losungenApp')
-  .controller('AboutCtrl', AboutCtrl);
+  .controller('UploadCtrl', UploadCtrl);
 
 
-  AboutCtrl.$inject = [ '$firebaseObject', '$firebaseAuth'];
+  UploadCtrl.$inject = [ '$firebaseObject', '$firebaseAuth'];
 
-  function AboutCtrl($firebaseObject, $firebaseAuth) {
+  function UploadCtrl($firebaseObject, $firebaseAuth) {
     console.log('about ctrl');
 
     var vm = this;

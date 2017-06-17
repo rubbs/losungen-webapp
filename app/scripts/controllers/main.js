@@ -25,6 +25,7 @@
     /////////////
 
     function loadNext() {
+      console.log('next');
       var d = new Date(vm.date);
       d.setDate(vm.date.getDate()+1);
       load(d);
@@ -41,7 +42,6 @@
       vm.load = true;
 
       var key = date.getFullYear() + '-' + ('0' + (date.getMonth()+1)).slice(-2) + '-' + ('0'+(date.getDate())).slice(-2);
-      console.log('key', key);
       vm.date = date;
       var ref = firebase.database().ref().child('losungen').child(key);
       // download the data into a local object

@@ -26,12 +26,22 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
+      .when('/upload', {
+        templateUrl: 'views/upload.html',
+        controller: 'UploadCtrl',
         controllerAs: 'about'
       })
       .otherwise({
         redirectTo: '/'
       });
+
+    // Initialize Firebase
+    var config = {
+      apiKey: 'AIzaSyA6w-C-4QKWb4hN84h-0cn4Jp3yWEy5tpY',
+      authDomain: 'losungen-a80b7.firebaseapp.com',
+      databaseURL: 'https://losungen-a80b7.firebaseio.com',
+      storageBucket: 'losungen-a80b7.appspot.com',
+      messagingSenderId: '299829452121'
+    };
+    firebase.initializeApp(config);
   });
